@@ -1,0 +1,119 @@
+/* ---- Style global pour le formulaire ---- */
+form {
+    max-width: 450px; /* Formulaire plus compact */
+    margin: 0 auto; /* Centrage horizontal */
+    padding: 30px;
+    background-color: #ffffff; /* Fond blanc épuré */
+    border-radius: 12px; /* Coins arrondis pour un effet moderne */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1); /* Ombre plus marquée pour un effet flottant */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Animation fluide */
+}
+
+form:hover {
+    transform: translateY(-5px); /* Léger mouvement de survol */
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2); /* Ombre plus marquée au survol */
+}
+
+/* ---- Style du titre ---- */
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333333; /* Gris sombre pour le titre */
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase; /* Met en majuscules pour un effet plus pro */
+    letter-spacing: 1px;
+}
+
+/* ---- Style des champs de saisie ---- */
+.form-control {
+    border: 1px solid #dcdfe6; /* Bordure plus douce */
+    border-radius: 8px; /* Coins arrondis */
+    background-color: #f7f9fc; /* Fond clair */
+    padding: 14px 18px; /* Espacement interne plus généreux */
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #007bff; /* Bordure bleue à l'activation */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25); /* Ombre subtile pour attirer l'attention */
+    outline: none; /* Retire l'effet de surbrillance par défaut */
+}
+
+/* ---- Style des labels ---- */
+label {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #495057; /* Gris foncé pour le contraste */
+    margin-bottom: 8px;
+}
+
+/* ---- Style des boutons ---- */
+button {
+    width: 100%;
+    margin-top: 20px;
+    background-color: #606162; /* Bleu professionnel */
+    border: none;
+    padding: 12px 20px;
+    color: #ffffff;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase; /* Tout en majuscule pour un aspect plus affirmé */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #9b035e; /* Bleu plus foncé au survol */
+    transform: translateY(-2px); /* Effet de déplacement léger */
+}
+
+button:disabled {
+    background-color: #ccc; /* Bouton désactivé en gris */
+    cursor: not-allowed;
+}
+
+/* ---- Style des alertes ---- */
+.alert {
+    margin-top: 15px;
+    padding: 15px;
+    font-size: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre douce pour l'alerte */
+    font-weight: 500;
+}
+
+.alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+/* ---- Style du checkbox ---- */
+.form-check-label {
+    margin-left: 5px;
+    color: #495057;
+    font-size: 1rem;
+}
+
+/* ---- Responsive Design pour les petits écrans ---- */
+@media (max-width: 768px) {
+    form {
+        padding: 20px; /* Moins d'espacement pour les petits écrans */
+    }
+
+    button {
+        font-size: 1rem;
+    }
+
+    h1 {
+        font-size: 1.6rem; /* Taille du titre ajustée pour les petits écrans */
+    }
+}

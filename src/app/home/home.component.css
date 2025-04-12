@@ -1,0 +1,94 @@
+/* ---- Conteneur des cartes ---- */
+.card-container {
+    display: flex; /* Disposition en Flexbox */
+    justify-content: center; /* Centrage horizontal */
+    align-items: center; /* Centrage vertical */
+    min-height: 100vh; /* Hauteur minimale sur toute la fenêtre */
+    flex-wrap: wrap; /* Réorganisation sur plusieurs lignes si nécessaire */
+    gap: 30px; /* Espacement entre les cartes */
+    background: linear-gradient(135deg, #f0f4ff, #d1d9ff); /* Arrière-plan avec un dégradé élégant */
+    padding: 20px; /* Marges internes pour éviter que les cartes soient collées */
+  }
+  
+  /* ---- Styles des cartes ---- */
+  .card {
+    background-color: #ffffff; /* Fond blanc propre */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Ombre subtile pour donner de la profondeur */
+    border-radius: 12px; /* Coins arrondis */
+    overflow: hidden; /* Empêche les débordements */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation fluide au survol */
+    width: 280px; /* Largeur fixe pour garantir une disposition uniforme */
+  }
+  
+  .card:hover {
+    transform: translateY(-5px); /* Soulèvement subtil au survol */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Ombre dynamique */
+  }
+  
+  /* ---- Image de la carte ---- */
+  .card-img-top {
+    height: 180px; /* Taille cohérente des images */
+    object-fit: cover; /* Les images remplissent la zone sans déformation */
+    width: 100%; /* Largeur complète */
+    border-bottom: 1px solid #ebebeb; /* Ligne de séparation subtile */
+  }
+  
+  /* ---- Contenu de la carte ---- */
+  .card-body {
+    padding: 20px; /* Espacement interne généreux */
+    color: #444; /* Texte légèrement foncé pour une meilleure lisibilité */
+    font-family: 'Roboto', sans-serif; /* Police moderne */
+  }
+  
+  /* ---- Titre de la carte ---- */
+  .card-title {
+    font-size: 1.4rem; /* Taille légèrement augmentée */
+    font-weight: bold; /* Titre proéminent */
+    color: #333; /* Couleur sombre pour contraste */
+    margin-bottom: 10px; /* Espacement inférieur */
+    text-transform: capitalize; /* Style moderne */
+  }
+  
+  /* ---- Texte descriptif ---- */
+  .card-text {
+    font-size: 1rem; /* Texte standard */
+    color: #666; /* Texte gris subtil */
+    margin-bottom: 16px; /* Espacement inférieur */
+    line-height: 1.6; /* Meilleure lisibilité */
+  }
+  
+  /* ---- Boutons de la carte ---- */
+  .card .btn {
+    font-size: 0.95rem; /* Taille ajustée */
+    padding: 10px 15px; /* Espacement autour du texte */
+    border-radius: 6px; /* Coins arrondis */
+    font-weight: bold; /* Texte en gras pour les boutons */
+    text-transform: uppercase; /* Style moderne */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .card .btn-primary {
+    background-color: #0056b3; /* Bleu professionnel */
+    border: none; /* Suppression des bordures */
+    color: #ffffff; /* Texte blanc */
+  }
+  
+  .card .btn-primary:hover {
+    background-color: #003d80; /* Couleur plus foncée au survol */
+    transform: scale(1.05); /* Légère mise en avant */
+  }
+  
+  /* ---- Responsive Design ---- */
+  @media (max-width: 768px) {
+    .card-container {
+      gap: 20px; /* Réduction de l'espacement pour les petits écrans */
+      padding: 15px; /* Ajustement des marges internes */
+    }
+  
+    .card {
+      width: 100%; /* Les cartes prennent toute la largeur sur mobile */
+      max-width: 350px; /* Limitation pour une bonne lisibilité */
+    }
+  }
+  
+  

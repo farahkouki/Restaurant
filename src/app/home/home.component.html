@@ -1,0 +1,16 @@
+<h1> liste des menus </h1>
+<div class="card-container">
+    <div *ngFor="let h of homes" class="card" style="width: 18rem;">
+      <img class="card-img-top" [src]="h.image" alt="{{h.title}}">
+      <div class="card-body">
+        <h5 class="card-title">{{h.title}}</h5>
+        <p class="card-text">Id: {{h.id}}</p>
+        <p class="card-text">description: {{h.description}}</p>
+        <p class="card-text">approved: {{h.approved}}</p>
+
+       <p class="card-text">reservations: {{h.reservations}}</p> 
+       <button class="btn btn-primary" routerLink="/update(id)"> update </button> 
+       
+      </div>
+    </div>
+  </div>

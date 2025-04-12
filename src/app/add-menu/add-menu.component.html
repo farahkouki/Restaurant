@@ -1,0 +1,41 @@
+<h1>Add menu</h1>
+
+<form [formGroup]="formLogin">
+    <div class="form-group">
+        <label for="idInput">Id</label>
+        <input type="number" class="form-control" id="idInput" placeholder="Id" formControlName="id">
+        <p *ngIf="formLogin.get('id')?.errors?.['required']">L'identifiant est obligatoire.</p>
+    </div>
+
+    <div class="form-group">
+        <label for="titleInput">title</label>
+        <input type="text" class="form-control" id="titleInput" placeholder="title" formControlName="title">
+        <p *ngIf="formLogin.get('title')?.errors?.['required']">Le nom est obligatoire.</p>
+    </div>
+    <div class="form-group">
+        <label for="descriptionInput">description</label>
+        <input type="text" class="form-control" id="descriptionInput" placeholder="description" formControlName="description">
+        <p *ngIf="formLogin.get('description')?.errors?.['required']">La description est obligatoire.</p>
+    </div>
+    <div class="form-group">
+        <label for="reservationsInput">reservations</label>
+        <input type="number" class="form-control" id="reservationsInput" placeholder="reservations" formControlName="reservations">
+        <p *ngIf="formLogin.get('reservations')?.errors?.['required']">La reservations est obligatoire.</p>
+    </div>
+
+    <div class="form-group">
+        <label for="approvedInput">approved</label>
+        <input type="checkbox" class="form-check-input" id="approvedInput" formControlName="approved">
+        <p *ngIf="formLogin.get('approved')?.errors?.['required']">L'approved est obligatoire.</p>
+    </div>
+    
+
+  
+
+    <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>
+
+    <button type="submit" class="btn btn-primary" (click)="add()" [disabled]="formLogin.invalid">Submit</button>
+</form>

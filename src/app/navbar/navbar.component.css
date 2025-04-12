@@ -1,0 +1,134 @@
+/* ---- Barre de navigation ultra-moderne ---- */
+.navbar {
+    background: linear-gradient(90deg, #00a093, #a50467); /* Dégradé élégant */
+    padding: 1rem 2rem; /* Espacement généreux */
+    border-radius: 12px; /* Bordure arrondie plus moderne */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée */
+    position: relative;
+    z-index: 10; /* Superposition pour une clarté visuelle */
+    transition: all 0.4s ease-in-out; /* Animation fluide */
+  }
+  
+  .navbar:hover {
+    transform: translateY(-2px); /* Effet de soulèvement subtil */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Ombre dynamique */
+  }
+  
+  /* ---- Liens de navigation ---- */
+  .navbar-light .navbar-nav .nav-link {
+    color: #f4f4f4; /* Texte gris clair */
+    font-size: 1.1rem; /* Taille légèrement augmentée */
+    padding: 0.8rem 1.2rem; /* Espacement pour toucher facilement */
+    font-weight: 500; /* Texte légèrement gras */
+    text-transform: capitalize; /* Texte moderne et clair */
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 8px; /* Arrondi pour un design cohérent */
+  }
+  
+  .navbar-light .navbar-nav .nav-link:hover,
+  .navbar-light .navbar-nav .nav-link.active {
+    color: #000000; /* Jaune doré pour attirer l'attention */
+    background-color: rgba(255, 255, 255, 0.1); /* Fond translucide élégant */
+    transform: scale(1.1); /* Zoom léger au survol */
+  }
+  
+  /* ---- Style du logo ou nom ---- */
+  .navbar-brand {
+    color: #ffffff; /* Blanc pur */
+    font-size: 1.8rem; /* Taille augmentée pour mettre en valeur */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px; /* Espacement proéminent entre les lettres */
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .navbar-brand:hover {
+    color: #000000; /* Jaune doré pour le survol */
+    transform: scale(1.05); /* Agrandissement subtil */
+  }
+  
+  /* ---- Bouton Toggle (écrans mobiles) ---- */
+  .navbar-toggler {
+    border: none; /* Suppression de la bordure par défaut */
+    outline: none;
+    padding: 0.5rem;
+    background-color: #bf0675; /* Bouton doré pour plus de contraste */
+    border-radius: 50%; /* Forme arrondie */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .navbar-toggler:hover {
+    background-color: #070603; /* Couleur légèrement plus sombre au survol */
+    transform: rotate(90deg); /* Animation de rotation */
+  }
+  
+  .navbar-toggler-icon {
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff; /* Barre blanche */
+    position: relative;
+    display: inline-block;
+    transition: all 0.3s ease;
+  }
+  
+  .navbar-toggler-icon::before,
+  .navbar-toggler-icon::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+  }
+  
+  .navbar-toggler-icon::before {
+    top: -8px;
+  }
+  
+  .navbar-toggler-icon::after {
+    top: 8px;
+  }
+  
+  .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+    background-color: transparent;
+  }
+  
+  .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before {
+    transform: rotate(45deg);
+    top: 0;
+  }
+  
+  .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+  
+  /* ---- Centrage des liens dans les écrans mobiles ---- */
+  .navbar-nav {
+    display: flex;
+    flex-direction: row; /* Ligne par défaut */
+  }
+  
+  @media (max-width: 768px) {
+    .navbar-nav {
+      flex-direction: column; /* Passer en colonne sur mobile */
+      text-align: center; /* Centrer les liens */
+      padding: 1rem 0;
+    }
+  
+    .navbar {
+      padding: 1rem; /* Ajustement de l'espacement */
+    }
+  }
+  
+  /* ---- Transition responsive ---- */
+  .navbar-nav.ml-auto {
+    margin-left: auto; /* Alignement à droite */
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      transition: none !important; /* Suppression des animations si utilisateur le demande */
+    }
+  }
+  
